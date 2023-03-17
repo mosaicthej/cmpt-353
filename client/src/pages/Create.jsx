@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./Create.css";
 
 const Create = () => {
     const [post, setPost] = useState({
@@ -27,7 +28,7 @@ const Create = () => {
     };
   
     return (
-      <div className="form">
+      <form>
         <h1>Add New Post</h1>
         <input
           type="text"
@@ -45,7 +46,7 @@ const Create = () => {
         <button onClick={handleClick}>Add</button>
         {error && "Something went wrong!"}
         <Link to="/posts">See all posts</Link>
-      </div>
+      </form>
     );
 };
 
